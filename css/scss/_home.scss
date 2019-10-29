@@ -1,12 +1,80 @@
+// ESTILOS GERAIS
+// ESTILO PADRÃO DE TITULO
+.titulo {
+  font-family: $family-arial;
+  line-height: 30px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+// ESTILO DE CALL PADRÃO
+.call {
+  clear: both;
+  padding-top: 40px;
+  text-align: center;
+  p {
+    margin-bottom: 20px;
+  }
+  &__btn {
+    padding: 10px 20px;
+    font-family: $family-arial;
+    font-size: $font-normal;
+    color: $amarelo-principal;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: .1em;
+    border: 3px solid $amarelo-principal;
+    &:hover {
+      color: $color-white;
+      border-color: $color-white;
+    }
+  }
+}
+
+.header {
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+  position: fixed;
+  background: $amarelo-principal;
+  z-index: 10;
+  &__menu {
+    text-align: right;
+    &--lista {
+      li {
+        margin-left: 25px;
+        margin-top: 20px;
+        display: inline-block;
+        a {
+          color: $color-black;
+          padding: 10px 0;
+          font-weight: bold;
+          line-height: 20px;
+          letter-spacing: .1em;
+          font-size: $font-normal;
+          font-family: $family-arial;
+          text-transform: uppercase;
+          &:hover {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
 .intro {
   width: 100%;
   height: 380px;
-  margin-top: 96px;
+  margin-top: 92px;
   padding-top: 80px;
   text-align: center;
   background-size: cover;
   background: url("../img/bg.jpg") no-repeat center;
-  &__titulo {
+  .titulo {
     font-weight: bold;
     color: $color-white;
     font-size: $font-xxlarge;
@@ -45,7 +113,7 @@
       text-transform: uppercase;
     }
   }
-  .btn {
+  &__btn {
     padding: 10px 20px;
     font-family: $family-arial;
     font-size: $font-normal;
@@ -58,6 +126,160 @@
     &:hover {
       color: $color-white;
       border-color: $color-white;
+    }
+  }
+}
+
+.produtos {
+  padding: 60px 0;
+  .titulo {
+    font-size: $font-xlarge;
+    color: $color-black;
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $color-black;
+      margin: 5px auto;
+    }
+  }
+  &__lista {
+    &--item {
+      text-align: center;
+      background: $amarelo-principal;
+      &__img {
+        padding: 20px;
+        background: $color-black;
+        img {
+          margin: 0 auto;
+        }
+      }
+      &__titulo {
+        font-size: $font-large;
+        font-family: $family-arial;
+        font-weight: bold;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        margin-top: 20px;
+        &::after {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 3px;
+          background: $color-black;
+          margin: 2px auto;
+        }
+      }
+      p {
+        padding: 10px 20px 20px 20px;
+      }
+    }
+  }
+  .call {
+    color: $color-black;
+    &__btn {
+      &:hover {
+        color: $color-black;
+        border-color: $color-black;
+      }
+    }
+  }
+}
+
+.portfolio {
+  width: 100%;
+  padding: 40px 0;
+  background: $color-black;
+  .titulo {
+    font-size: $font-xlarge;
+    color: $amarelo-principal;
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $amarelo-principal;
+      margin: 5px auto;
+    }
+  }
+  &__lista {
+    li {
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+  .call {
+    color: $color-white;
+    &__btn {
+      &:hover {
+        color: $color-white;
+        border-color: $color-white;
+      }
+    }
+  }
+}
+
+.qualidade {
+  padding: 60px 0;
+  &::after {
+    content: '';
+    display: block;
+    width: 634px;
+    height: 83px;
+    background: url('../img/linhas.svg') no-repeat center;
+    position: absolute;
+    top: 205px;
+    right: 162px;
+    z-index: -1;
+  }
+  .titulo {
+    color: $color-black;
+    font-size: $font-xlarge;
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $color-black;
+      margin: 5px auto;
+    }
+  }
+  img {
+    margin: 0 auto;
+  }
+  &__lista {
+    padding-top: 20px;
+    &--item {
+      text-align: center;
+      padding: 0 40px;
+      &__titulo {
+        font-size: $font-large;
+        font-family: $family-arial;
+        font-weight: bold;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        margin-top: 20px;
+        &::after {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 3px;
+          background: $color-black;
+          margin: 6px auto;
+        }
+      }
+    }
+  }
+  .call {
+    &__btn {
+      &:hover {
+        color: $color-black;
+        border-color: $color-black;
+      }
     }
   }
 }
