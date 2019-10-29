@@ -4,6 +4,7 @@
   padding: 15px 0;
   position: fixed;
   background: $amarelo-principal;
+  z-index: 10;
   &__menu {
     text-align: right;
     &--lista {
