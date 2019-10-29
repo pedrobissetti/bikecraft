@@ -12,16 +12,16 @@
         margin-top: 20px;
         display: inline-block;
         a {
-          color: $preto;
+          color: $color-black;
           padding: 10px 0;
           font-weight: bold;
           line-height: 20px;
           letter-spacing: .1em;
           font-size: $font-normal;
-          font-family: $font-arial;
+          font-family: $family-arial;
           text-transform: uppercase;
           &:hover {
-            color: $branco;
+            color: $color-white;
           }
         }
       }
