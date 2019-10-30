@@ -1,0 +1,67 @@
+.sobre {
+  width: 100%;
+  margin-top: 92px;
+  height: 160px;
+  text-align: center;
+  color: $color-white;
+  padding-top: 30px;
+  background: url('../img/background/bg-sobre.jpg') no-repeat center;
+  background-size: cover !important;
+  &__titulo {
+    font-size: $font-xxlarge;
+    font-weight: bold;
+    font-family: $family-arial;
+    text-transform: uppercase;
+    color: $color-white;
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $color-white;
+      margin: 6px auto 10px auto
+    }
+  }
+  p {
+    font-size: $font-small;
+    font-family: $family-georgia, "Times New Roman", serif;
+    line-height: 20px;
+  }
+}
+
+.missao__sobre {
+  padding-top: 60px;
+  &--titulo {
+    font-size: $font-xlarge;
+    line-height: 30px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: $color-black;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: $family-arial;
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $color-black;
+      margin: 5px 0;
+    }
+  }
+  p {
+    font-size: $font-medium;
+    line-height: 25px;
+    margin-bottom: 1em;
+    padding-right: 60px;
+    font-weight: normal;
+    font-family: $family-georgia, "Times New Roman", serif;
+  }
+  &--lista {
+    &__item {
+      font-family: $family-georgia, "Times New Roman", serif;
+      font-size: $font-medium;
+      line-height: 30px;
+    }
+  }
+}
