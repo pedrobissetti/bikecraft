@@ -79,7 +79,7 @@
   margin-top: 92px;
   padding-top: 80px;
   text-align: center;
-  background-size: cover;
+  background-size: cover !important;
   background: url("../img/bg.jpg") no-repeat center;
   .titulo {
     font-weight: bold;
@@ -117,7 +117,7 @@
       font-weight: bold;
       font-size: $font-normal;
       letter-spacing: .1em;
-      text-transform: uppercase;
+      font-family: $family-arial;
     }
   }
   &__btn {
