@@ -8,6 +8,13 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 6px auto;
+  }
 }
 // ESTILO DE CALL PADRÃO
 .call {
@@ -136,12 +143,7 @@
     font-size: $font-xlarge;
     color: $color-black;
     &::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
       background: $color-black;
-      margin: 5px auto;
     }
   }
   &__lista {
@@ -164,12 +166,7 @@
         letter-spacing: .1em;
         margin-top: 20px;
         &::after {
-          content: '';
-          display: block;
-          width: 60px;
-          height: 3px;
           background: $color-black;
-          margin: 2px auto;
         }
       }
       p {
@@ -196,12 +193,7 @@
     font-size: $font-xlarge;
     color: $amarelo-principal;
     &::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
       background: $amarelo-principal;
-      margin: 5px auto;
     }
   }
   &__lista {
@@ -222,6 +214,24 @@
   }
 }
 
+.about {
+  padding-top: 60px;
+  .titulo {
+    font-size: $font-xlarge;
+    margin-bottom: 20px;
+    &::after {
+      background: $color-black;
+    }
+  }
+  p {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $font-medium;
+    letter-spacing: .1em;
+  }
+}
+
 .qualidade {
   padding: 60px 0;
   &::after {
@@ -239,12 +249,7 @@
     color: $color-black;
     font-size: $font-xlarge;
     &::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
       background: $color-black;
-      margin: 5px auto;
     }
   }
   img {
@@ -264,12 +269,7 @@
         letter-spacing: .1em;
         margin-top: 20px;
         &::after {
-          content: '';
-          display: block;
-          width: 60px;
-          height: 3px;
           background: $color-black;
-          margin: 6px auto;
         }
       }
     }
@@ -281,5 +281,15 @@
         border-color: $color-black;
       }
     }
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  background: $amarelo-principal;
+  p {
+    font-weight: bold;
   }
 }
