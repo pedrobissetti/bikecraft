@@ -1,0 +1,137 @@
+.contato {
+  width: 100%;
+  margin-top: 92px;
+  height: 160px;
+  text-align: center;
+  color: $color-white;
+  padding-top: 30px;
+  background: url('../img/background/bg-contato.jpg') no-repeat center;
+  background-size: cover !important;
+  &__titulo {
+    font-size: $font-xxlarge;
+    font-weight: bold;
+    font-family: $family-arial;
+    text-transform: uppercase;
+    color: $color-white;
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $color-white;
+      margin: 6px auto 10px auto
+    }
+  }
+  p {
+    font-size: $font-small;
+    font-family: $family-georgia, "Times New Roman", serif;
+    line-height: 20px;
+  }
+}
+
+.contato__section {
+  margin-top: 40px;
+  &--form {
+    padding-right: 60px;
+    label {
+      display: block;
+      font-family: $family-georgia, "Times New Roman", serif;
+      font-size: $font-medium;
+      line-height: 25px;
+      margin-bottom: 4px;
+    }
+    input {
+      display: block;
+      width: 100%;
+      border: 4px solid $amarelo-principal;
+      background: none;
+      padding: 7px 10px;
+      margin-bottom: 10px;
+      outline: none;
+      font-size: $font-normal;
+      font-family: $family-georgia, "Times New Roman", serif;
+    }
+    textarea {
+      display: block;
+      width: 100%;
+      height: 120px;
+      border: 4px solid $amarelo-principal;
+      background: none;
+      padding: 7px 10px;
+      margin-bottom: 20px;
+      outline: none;
+      font-size: $font-small;
+      font-family: $family-georgia, "Times New Roman", serif;
+      resize: none;
+    }
+    &__btn {
+      border: 3px solid $amarelo-principal;
+      padding: 7px 40px;
+      color: $amarelo-principal;
+      font-size: $font-normal;
+      line-height: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: .1em;
+      transition: all .5s ease;
+      background: $color-white;
+      font-family: $family-arial;
+      transition: all .5s ease;
+      cursor: pointer;
+      &:hover {
+        color: $color-black;
+        border-color: $color-black;
+      }
+    }
+  }
+  &--dados {
+    &__titulo {
+      font-family: $family-arial;
+      font-size: $font-large;
+      line-height: 25px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $amarelo-principal;
+    }
+    span {
+      display: flex;
+      font-size: $font-medium;
+      line-height: 30px;
+      font-family: Georgia, "Times New Roman", serif;
+      &:nth-of-type(even) {
+        margin-bottom: 30px;
+      }
+    }
+    &__redes {
+      font-family: $family-arial;
+      font-size: $font-large;
+      line-height: 25px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $amarelo-principal;
+    }
+    &__lista {
+      margin-top: 10px;
+      display: flex;
+      &--item {
+        margin-right: 10px;
+        a {
+          border: 3px solid #fec63e;
+          display: block;
+          padding: 10px;
+          &:hover {
+            border-color: $color-black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contato__mapa {
+  margin-top: 40px;
+}
+
+#footer__contato {
+  margin-top: 40px;
+}
