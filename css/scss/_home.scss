@@ -34,6 +34,7 @@
     line-height: 20px;
     letter-spacing: .1em;
     border: 3px solid $amarelo-principal;
+    transition: all .5s ease;
     &:hover {
       color: $color-white;
       border-color: $color-white;
@@ -130,6 +131,7 @@
     line-height: 20px;
     letter-spacing: .1em;
     border: 3px solid $amarelo-principal;
+    transition: all .5s ease;
     &:hover {
       color: $color-white;
       border-color: $color-white;
