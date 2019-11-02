@@ -71,7 +71,12 @@
     }
     &--info {
       display: none;
-      &__img { }
+      position: absolute;
+      top: 350px;
+      left: 0;
+      &.ativo {
+        display: flex;
+      }
       &__descricao {
         background: $color-black;
         p {

@@ -83,16 +83,14 @@
         font-size: $font-medium;
         font-family: $family-arial;
         text-transform: uppercase;
-        background: $color-black;
-        border: none;
+        background: $color-white;
+        border: 2px solid $color-black;
         border-radius: 4px;
         padding: .7rem 2rem;
         margin-top: 1rem;
         font-weight: bold;
         cursor: pointer;
-        color: $color-white;
         &:hover {
-          color: $color-black;
           background: $amarelo-principal;
         }
       }
