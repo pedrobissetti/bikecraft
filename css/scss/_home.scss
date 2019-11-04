@@ -62,13 +62,17 @@
           font-weight: bold;
           line-height: 20px;
           letter-spacing: .1em;
-          font-size: $font-normal;
+          font-size: $font-small;
           font-family: $family-arial;
           text-transform: uppercase;
+          transition: all .3s ease;
           &:hover {
             color: $color-white;
           }
         }
+      }
+      .menu__ativo {
+        color: $color-white;
       }
     }
   }
