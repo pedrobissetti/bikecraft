@@ -52,6 +52,8 @@
     &--fechar {
       width: 50px;
       height: 50px;
+      outline: none;
+      cursor: pointer;
       background: $amarelo-principal url('../../img/fechar.svg') center center no-repeat;
       border-radius: 50px;
       border: 4px solid $color-white;
@@ -59,7 +61,11 @@
       right: -30px;
       position: absolute;
       box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
-      cursor: pointer;
+      transition-property: transform;
+      transition-duration: .2s;
+      &:hover {
+        transform: rotate(-90deg);
+      }
     }
     .form {
       label {
@@ -74,6 +80,7 @@
         border: 2px solid $color-grey;
         border-radius: 0px;
         font-family: $family-georgia;
+        outline: none;
       }
       textarea {
         display: block;
@@ -103,6 +110,7 @@
         margin-top: 1rem;
         font-weight: bold;
         cursor: pointer;
+        outline: none;
         &:hover {
           border-color: $amarelo-principal;
           color: $amarelo-principal;
