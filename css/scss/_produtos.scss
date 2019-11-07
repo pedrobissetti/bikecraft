@@ -75,7 +75,18 @@
       top: 350px;
       left: 0;
       &.ativo {
-        display: flex;
+        display: block;
+        animation: slideDown .5s forwards;
+      }
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          max-height: 0;
+        }
+        to {
+          max-height: 200px;
+          opacity: 1;
+        }
       }
       &__descricao {
         background: $color-black;
@@ -86,6 +97,7 @@
           height: 180px;
           padding: 30px 40px;
           font-family: $family-georgia;
+          text-align: center;
         }
         &--lista {
           &__item {

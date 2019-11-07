@@ -297,6 +297,42 @@
   padding-top: 40px;
   background: url('../../img/background/bg-footer.jpg') no-repeat center;
   background-size: cover;
+  &__quote {
+    margin: 30px auto;
+    max-width: 320px;
+    &--cite {
+      text-align: center;
+      color: $color-white;
+      font-style: italic;
+      font-size: $font-small;
+      font-family: $family-georgia;
+      &::before {
+        content: '';
+        width: 60px;
+        height: 3px;
+        display: block;
+        background: $color-white;
+        margin: 0 auto 10px;
+      }
+      &::after {
+        content: '';
+        width: 60px;
+        height: 3px;
+        display: block;
+        background: $color-white;
+        margin: 10px auto 12px;
+      }
+    }
+    &--titulo {
+      color: $color-white;
+      font-family: $family-arial;
+      font-size: $font-normal;
+      letter-spacing: .1rem;
+      font-weight: bold;
+      font-style: normal;
+      margin-top: 10px;
+    }
+  }
 }
 
 .footer {
