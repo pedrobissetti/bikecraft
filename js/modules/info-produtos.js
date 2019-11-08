@@ -1,10 +1,24 @@
 export default function initInfoProdutos() {
-  const infoList = document.querySelector('.product__icone');
-  const infoContainer = document.querySelector('.product__icone--info');
+  const passeioContainer = document.getElementById('passeio__container');
+  const esporteContainer = document.getElementById('esporte__container');
+  const retroContainer = document.getElementById('retro__container');
+  const infoPasseio = document.getElementById('passeio__info');
+  const infoEsporte = document.getElementById('esporte__info');
+  const infoRetro = document.getElementById('retro__info');
+  const activeClass = 'ativo'
 
-  function activeInfo() {
-    infoContainer.classList.toggle('ativo');
+  function activePasseio() {
+    infoPasseio.classList.toggle(activeClass);
+  }
+  
+  function activeEsporte() {
+    infoEsporte.classList.toggle(activeClass);
+  }
+  function activeRetro() {
+    infoRetro.classList.toggle(activeClass);
   }
 
-  infoList.addEventListener('click', activeInfo);
+  passeioContainer.addEventListener('click', activePasseio);
+  esporteContainer.addEventListener('click', activeEsporte);
+  retroContainer.addEventListener('click', activeRetro);
 }
