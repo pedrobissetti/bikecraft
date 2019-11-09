@@ -343,3 +343,79 @@
     font-weight: bold;
   }
 }
+
+// RESPONSIVO MOBILE
+@include device(sm) {
+  .header {
+    &__menu {
+      &--lista {
+        text-align: center;
+        li {
+          margin-left: 0;
+        }
+      }
+    }
+    &__mobile {
+      &--btn {
+        display: block;
+        color: $color-black;
+        width: 36px;
+        height: 36px;
+        border-top: 4px solid;
+        margin: 20px 240px 0 0;
+        float: right;
+        position: relative;
+        cursor: pointer;
+        -webkit-backface-visibility: hidden;
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          height: 4px;
+          margin-top: 6px;
+          background: currentColor;
+          position: relative;
+          transition: transform .2s ease;
+        }
+        &.active {
+          border-top-color: transparent;
+          &::before {
+            margin-top: 0px;
+            top: 6px;
+            transform: rotate(135deg);
+          }
+          &::after {
+            margin-top: 0px;
+            top: 2px;
+            transform: rotate(45deg);
+          }
+        }
+      }
+      &--menu {
+        position: fixed;
+        background: $amarelo-principal;
+        padding: 15px;
+        top: 60px;
+        right: -10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(60px, 0px, 0px);
+        transition: .3s;
+        &.active {
+          opacity: 1;
+          width: 130px;
+          visibility: visible;
+          transform: translate3d(0px, 0px, 0px);
+        }
+        li {
+          display: block;
+        }
+        a {
+          border-top: 2px solid;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
