@@ -7,18 +7,20 @@ export default function initInfoProdutos() {
   const infoRetro = document.getElementById('retro__info');
   const activeClass = 'ativo'
 
-  function activePasseio() {
-    infoPasseio.classList.toggle(activeClass);
-  }
-  
-  function activeEsporte() {
-    infoEsporte.classList.toggle(activeClass);
-  }
-  function activeRetro() {
-    infoRetro.classList.toggle(activeClass);
-  }
+  if ( passeioContainer && esporteContainer && retroContainer && infoPasseio && infoEsporte && infoRetro) {
+    function activePasseio() {
+      infoPasseio.classList.toggle(activeClass);
+    }
 
-  passeioContainer.addEventListener('click', activePasseio);
-  esporteContainer.addEventListener('click', activeEsporte);
-  retroContainer.addEventListener('click', activeRetro);
+    function activeEsporte() {
+      infoEsporte.classList.toggle(activeClass);
+    }
+    function activeRetro() {
+      infoRetro.classList.toggle(activeClass);
+    }
+
+    passeioContainer.addEventListener('click', activePasseio);
+    esporteContainer.addEventListener('click', activeEsporte);
+    retroContainer.addEventListener('click', activeRetro);
+  }
 }
