@@ -1,0 +1,111 @@
+.header {
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+  position: fixed;
+  background: $amarelo-principal;
+  z-index: 10;
+  &__menu {
+    text-align: right;
+    &--lista {
+      li {
+        margin-left: 25px;
+        margin-top: 20px;
+        display: inline-block;
+        a {
+          color: $color-black;
+          padding: 10px 0;
+          font-weight: bold;
+          line-height: 20px;
+          letter-spacing: .1em;
+          font-size: $font-small;
+          font-family: $family-arial;
+          text-transform: uppercase;
+          transition: all .3s ease;
+          &:hover {
+            color: $color-white;
+          }
+        }
+      }
+      .menu__ativo {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+// RESPONSIVO HEADER MOBILE
+@include device(sm) {
+  .header {
+    &__menu {
+      &--lista {
+        text-align: center;
+        li {
+          margin-left: 0;
+        }
+      }
+    }
+    &__mobile {
+      &--btn {
+        display: block;
+        color: $color-black;
+        width: 36px;
+        height: 36px;
+        border-top: 4px solid;
+        margin: 20px 240px 0 0;
+        float: right;
+        position: relative;
+        cursor: pointer;
+        -webkit-backface-visibility: hidden;
+        &::before,
+        &::after {
+          content: '';
+          display: block;
+          height: 4px;
+          margin-top: 6px;
+          background: currentColor;
+          position: relative;
+          transition: transform .2s ease;
+        }
+        &.active {
+          border-top-color: transparent;
+          &::before {
+            margin-top: 0px;
+            top: 6px;
+            transform: rotate(135deg);
+          }
+          &::after {
+            margin-top: 0px;
+            top: 2px;
+            transform: rotate(45deg);
+          }
+        }
+      }
+      &--menu {
+        position: fixed;
+        background: $amarelo-principal;
+        padding: 15px;
+        top: 60px;
+        right: -10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(60px, 0px, 0px);
+        transition: .3s;
+        &.active {
+          opacity: 1;
+          width: 130px;
+          visibility: visible;
+          transform: translate3d(0px, 0px, 0px);
+        }
+        li {
+          display: block;
+        }
+        a {
+          border-top: 2px solid;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
