@@ -1,32 +1,5 @@
-.produto {
-  width: 100%;
-  margin-top: 92px;
-  height: 160px;
-  text-align: center;
-  color: $color-white;
-  padding-top: 30px;
+#produto {
   background: url('../img/background/bg-produtos.jpg') no-repeat center;
-  background-size: cover !important;
-  &__titulo {
-    font-size: $font-xxlarge;
-    font-weight: bold;
-    font-family: $family-arial;
-    text-transform: uppercase;
-    color: $color-white;
-    &::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: $color-white;
-      margin: 6px auto 10px auto
-    }
-  }
-  p {
-    font-size: $font-small;
-    font-family: $family-georgia, "Times New Roman", serif;
-    line-height: 20px;
-  }
 }
 
 .product {
@@ -124,4 +97,8 @@
       }
     }
   }
+}
+
+#footer {
+  margin-top: 20px;
 }
