@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const stripCssComments = require('gulp-strip-css-comments');
 
 // Função SASS
 function compilaSass() {
@@ -7,6 +8,9 @@ function compilaSass() {
     .src('css/scss/**/*.scss')
     .pipe(sass({
       outputStyle: 'compressed'
+    }))
+    .pipe(stripCssComments({
+      preserve: false
     }))
     .pipe(gulp.dest('css/'))
 }
@@ -19,5 +23,4 @@ function watch() {
 }
 
 gulp.task('watch', watch);
-
 gulp.task('default', gulp.parallel('watch', 'sass'));
