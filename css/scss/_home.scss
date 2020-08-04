@@ -1,8 +1,8 @@
-// ESTILOS GERAIS
+// ESTILOS HOME
 .titulo {
   font-family: $family-arial;
   line-height: 30px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -31,9 +31,9 @@
     text-transform: uppercase;
     font-weight: bold;
     line-height: 20px;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     border: 3px solid $amarelo-principal;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     &:hover {
       color: $color-white;
       border-color: $color-white;
@@ -48,7 +48,7 @@
   padding-top: 80px;
   text-align: center;
   background-size: cover !important;
-  background: url("../img/background/bg.jpg") no-repeat center;
+  background: url('../img/background/bg.jpg') no-repeat center;
   .titulo {
     font-weight: bold;
     color: $color-white;
@@ -60,7 +60,7 @@
     margin: 0 auto 40px;
     color: $color-white;
     p {
-      font-family: $family-georgia, "Times New Roman", serif;
+      font-family: $family-georgia, 'Times New Roman', serif;
       font-size: $font-small;
       font-style: italic;
       &::before {
@@ -84,7 +84,7 @@
       font-style: normal;
       font-weight: bold;
       font-size: $font-normal;
-      letter-spacing: .1em;
+      letter-spacing: 0.1em;
       font-family: $family-arial;
     }
   }
@@ -96,9 +96,9 @@
     text-transform: uppercase;
     font-weight: bold;
     line-height: 20px;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     border: 3px solid $amarelo-principal;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     &:hover {
       color: $color-white;
       border-color: $color-white;
@@ -132,7 +132,7 @@
         font-weight: bold;
         line-height: 25px;
         text-transform: uppercase;
-        letter-spacing: .1em;
+        letter-spacing: 0.1em;
         margin-top: 20px;
         &::after {
           background: $color-black;
@@ -197,7 +197,7 @@
     margin: 0 auto;
     text-align: center;
     font-size: $font-medium;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
   }
 }
 
@@ -235,7 +235,7 @@
         font-weight: bold;
         line-height: 25px;
         text-transform: uppercase;
-        letter-spacing: .1em;
+        letter-spacing: 0.1em;
         margin-top: 20px;
         &::after {
           background: $color-black;
@@ -290,7 +290,7 @@
       color: $color-white;
       font-family: $family-arial;
       font-size: $font-normal;
-      letter-spacing: .1rem;
+      letter-spacing: 0.1rem;
       font-weight: bold;
       font-style: normal;
       margin-top: 10px;
@@ -308,3 +308,19 @@
   }
 }
 
+.js {
+  &-scroll {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+    transition: 0.3s;
+  }
+}
+
+.js {
+  &-scroll {
+    &.ativo {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
